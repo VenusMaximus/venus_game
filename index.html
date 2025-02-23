@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;Venusian Odyssey&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>canvas {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 1px solid #FFD700; /* Gold border */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: radial-gradient(circle, #FFD700 10%, #FF4500 50%, #4B1E5A 100%);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: none; /* Hidden until game starts */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>height: 100vh;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: #FFD700; /* Gold background like your website */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-family: 'Arial', sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#score, #level {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>position: absolute;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #FFFDD0; /* Cream text */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: none; /* Hidden until game starts */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#score { top: 10px; left: 10px; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#level { top: 30px; left: 10px; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#intro {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #2ECC71; /* Emerald green text */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-family: 'Georgia', serif; /* Matches your website’s font vibe */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 36px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-shadow: 0 0 10px #FFD700; /* Gold glow */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: url('https://i.imgur.com/your-pepe-image.jpg') no-repeat center center; /* Placeholder for Pepe Venusian Goddess image */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-size: contain;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 0 20px #2ECC71; /* Emerald green halo */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 800px; /* Match canvas width for centering */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>height: 600px; /* Match canvas height for centering */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>flex-direction: column;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: rgba(255, 215, 0, 0.8); /* Semi-transparent gold overlay for text readability */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#intro h1 {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 48px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>line-height: 1.2;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: bold;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-transform: uppercase; /* Matches your website’s bold, uppercase look */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#intro p {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 10px 0 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 28px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-style: italic; /* Subtle Venusian touch */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#intro button {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-top: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 12px 24px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: #2ECC71; /* Emerald green button */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #FFD700; /* Gold text */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 2px solid #FFD700; /* Gold border */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 20px; /* Rounded like your “Buy Now” button */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition: all 0.3s ease;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-family: 'Arial', sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#intro button:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: #FFD700; /* Gold on hover */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #2ECC71; /* Emerald green text */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 0 15px #FFD700; /* Gold glow */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div id="intro"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Venus Maximus | Love, Beauty, &amp; Abundance&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;Venusian Odyssey&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;button onclick="startGame()"&gt;Embark on the Journey&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div id="score"&gt;Love Shards: 0&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div id="level"&gt;Awakening: 1&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;canvas id="gameCanvas" width="800" height="600"&gt;&lt;/canvas&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const canvas = document.getElementById('gameCanvas');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const ctx = canvas.getContext('2d');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const scoreDisplay = document.getElementById('score');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const levelDisplay = document.getElementById('level');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const intro = document.getElementById('intro');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const player = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>x: canvas.width / 2,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>y: canvas.height - 50,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 40,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>height: 50,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>speed: 6,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>dx: 0,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>dy: 0</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>};</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let shadows = [];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let loveShards = [];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let diamondHearts = [];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let xrplCoins = [];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let loveCount = 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let level = 1;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const shardSound = new Audio('https://freesound.org/data/previews/66/66717_40507-lq.mp3');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const crashSound = new Audio('https://www.soundjay.com/explosions/explosion-01.mp3');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const diamondSound = new Audio('https://freesound.org/data/previews/174/174027_3242494-lq.mp3');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const coinSound = new Audio('https://www.soundjay.com/buttons/beep-07.mp3');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function startGame() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>intro.style.display = 'none';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>canvas.style.display = 'block';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>scoreDisplay.style.display = 'block';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>levelDisplay.style.display = 'block';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>gameLoop();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>document.addEventListener('keydown', (e) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (e.key === 'ArrowLeft' || e.key === 'a') player.dx = -player.speed;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (e.key === 'ArrowRight' || e.key === 'd') player.dx = player.speed;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (e.key === '</span></p>
+</body>
+</html>
